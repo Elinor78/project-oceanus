@@ -9,13 +9,24 @@
     <link rel="icon" href="../../favicon.ico">
 
     <title>Home Page for Project Oceanus</title>
-
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 35px;
+        padding: 0px;
+        color: #333;
+      }
+    </style>
     <!-- Bootstrap core CSS -->
     <link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="assets/css/jtron.css" rel="stylesheet">
 
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="http://jquery-csv.googlecode.com/git/src/jquery.csv.js"></script>  
+    <script src="assets/js/map-infowind.js"></script>
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
@@ -54,18 +65,14 @@
         </div><!--/.navbar-collapse -->
       </div>
     </div>
-    <div class="container">
-      <h1>Explore the world as your bot!</h1>
-      <h3>Maps with functions like:</h3>
-      <ul>
-        <li>Friends - Bots your bot has come in contact with.</li>
-        <li>Geography - Learn about the countries and landmasses your bot encounters</li>
-      </ul>
-            <hr>
-
-      <footer>
-        <p>&copy; Project Oceanus 2014</p>
-      </footer>
-    </div>
+    <h1>Explore the world as your bot!</h1>
+    <h4>This page will allow you to follow your bot around the world
+        <ul>
+          <li>View science data like speed and ocean temperature!</li>
+          <li>See if your bot's path has intersected with any other bots' paths - make new friends!</li>
+          <li>Learn about the places your bot visits!</li>
+        </ul></h4>
+    <div style="text-align:center;">Click the markers to see date and speed for our second launch off Naples, FL</div>
+    <div id="map-canvas" style="margin-top:0px;"></div>
   </body>
 </html>
